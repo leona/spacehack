@@ -1,6 +1,6 @@
 var request = require('superagent');
 
-var test_url = 'http://nightlife-new-leonharvey.c9users.io'
+var test_url = ''
 var requests = 20;
 
 for(var i = 0;i < requests;i++) {
