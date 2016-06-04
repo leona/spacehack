@@ -1,0 +1,6 @@
+require('shelljs/global');
+
+exec('cd ../');
+exec('sudo mongod --dbpath /data --repair --repairpath /data');
+exec('sudo rm data/mongod.lock');
+exec('sudo mongod --dbpath=data --nojournal --rest "$@" --fork --logpath logs/mongo');

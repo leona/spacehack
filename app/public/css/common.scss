@@ -1,0 +1,260 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+  margin:0;
+  font:14px 'Ubuntu';
+  color:black;
+  font-weight:100;
+}
+
+h2 {
+  font-weight:400;
+}
+
+$blue: #45c4db;
+$green: #9be164;
+$yellow: #f9c36c;
+$purple: #c98ad9;
+$red: #F33D3D;
+$black: #5A5A5A;
+
+.blue-bg {
+  background: $blue !important;
+}
+
+.green-bg {
+  background: $green;
+}
+
+.yellow-bg {
+  background: $yellow;
+}
+
+.purple-bg {
+  background: $purple;
+}
+
+.red-bg {
+  background: $red !important;
+}
+
+a {
+  text-decoration:none;
+}
+
+.center-all {
+  position:absolute;
+  margin:auto;
+  top:0;left:0;right:0;bottom:0;
+}
+
+.center-all-2 {
+  position: absolute;
+  @include transform(translateY(-50%));
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+.center-horizontal {
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+.center-vertical {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+input[type=text], input[type=email], input[type=password] {
+    background: rgba(125, 125, 125, 0.82);
+    font-size: 27px;
+    font-weight:100;
+    padding: 10px;
+    border:none;
+    border-bottom: 2px solid #969696;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    width: 100%;
+    
+    &:focus {
+      outline:none;
+      border-color: rgba(255,255,255,0.8);
+    }
+}
+
+input[type=submit] {
+  padding:8px;
+  background:#2D459C;
+  color:white;
+  border:none;
+  border-radius:3px;
+  
+  &.loading {
+    background-image:url(../img/rolling.gif);
+    width:40px;
+    color:transparent;
+    background-size: 62%;
+    background-repeat: no-repeat;
+    background-position: 9px;
+    background-color:#2D459C !important;
+  }
+  
+  &:hover {
+    background:rgb(6, 54, 228);
+  }
+  &:focus {
+    outline:none;
+  }
+}
+
+.wrap-form {
+  input[type=text], input[type=email], input[type=password], input[type=submit] {
+    display:block;
+    width:100%;
+  }
+}
+
+.form-group {
+  input[type=checkbox] {
+    margin-right:6px;
+  }
+}
+
+.err-msg {
+  color:$red;
+  font-style:italic;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    
+  .err-msg {
+    display:none;
+  }
+  
+  &.error  {
+    input[type=text], input[type=email], input[type=password] {
+      border-color:rgba(181, 37, 37, 0.6) !important;
+    }
+  }
+  
+  &.error .err-msg {
+    display:block;
+  }
+}
+
+
+.redirect-btn {
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.btn {
+  margin-top:5px;
+}
+
+.text-center {
+  text-align:center;
+}
+
+label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;         
+}
+
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display:block
+}
+
+.round-image {
+  border-radius:50%;
+  overflow:hidden;
+  display:inline-block;
+  
+  img {
+    border-radius:50%;
+    @extend .img-responsive;
+  }
+}
+
+iframe {
+  border:none;
+}
+
+.reset {
+  margin:0;
+  padding:0;
+}
+
+
+
+.recaptcha {
+  transform:scale(0.77);
+  -webkit-transform:scale(0.77);
+  transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgba(255,255,255,0.3);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgba(255,255,255,0.3);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgba(255,255,255,0.3);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    rgba(255,255,255,0.3);
+}
+
+textarea {
+  width: 100%;
+  height: 84px;
+  margin-top: 9px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  padding: 5px;
+  
+  &:focus {
+    outline:none;
+  }
+}
+
+ul {
+  padding:0;
+  margin:0;
+}

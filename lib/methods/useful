@@ -1,0 +1,7 @@
+//load an api
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = '//localhost:10000/static/js/api.js';
+    s.parentNode.insertBefore(g, s);
+}(document, 'script'));

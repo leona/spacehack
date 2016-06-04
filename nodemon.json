@@ -1,0 +1,4 @@
+{   
+    "ignore": ["app/public", "public/css/build", "public/js", "node_modules"],
+    "ext": "js"
+}

@@ -1,0 +1,6 @@
+DIR="/home/ubuntu/workspace/"
+sudo mongod --shutdown --dbpath ""$DIR"data"
+sudo mongod --dbpath ""$DIR"data" --repair --repairpath ""$DIR"data"
+sudo rm ""$DIR"data/mongod.lock"
+sudo mongod --dbpath=""$DIR"data" --nojournal --rest "$@" --fork --logpath ""$DIR"logs/mongo"
+sudo node $DIR"bin/web"
